@@ -1,5 +1,5 @@
 # Python3 executable
-PYTHON = ./.venv/bin/python3
+PYTHON = .venv/bin/python3
 
 # Code sources directory
 SOURCES = sources
