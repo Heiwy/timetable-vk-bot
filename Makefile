@@ -7,7 +7,12 @@ SOURCES = sources
 .PHONY: run lint
 
 run: lint
+	export $(cat .env | xargs)
 	${PYTHON} ${SOURCES}/wsgi.py
 
 lint:
-	flake8 ${SOURCES}
+	flake8 --ignore F401 ${SOURCES}
+
+venv:
+	python3 -m venv .venv
+	${PYTHON} -m pip install -r requirements.txt
