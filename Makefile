@@ -7,7 +7,6 @@ SOURCES = sources
 .PHONY: run lint
 
 run: lint
-	export $(cat .env | xargs)
 	${PYTHON} ${SOURCES}/wsgi.py
 
 lint:
